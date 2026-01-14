@@ -4,13 +4,24 @@
   <meta charset="UTF-8" />
   <title>TradingView Ticker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 52px;          /* ← ключовий момент */
+      overflow: hidden;      /* ← прибирає всі скроли */
       background: transparent;
+    }
+
+    tv-ticker-tape {
+      display: block;
+      height: 52px;
     }
   </style>
 </head>
+
 <body>
 
 <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
