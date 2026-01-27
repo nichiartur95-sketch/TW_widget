@@ -5,21 +5,23 @@
   <title>TradingView Ticker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 90px;          /* ← ключовий момент */
-      overflow: hidden;      /* ← прибирає всі скроли */
-      background: transparent;
-    }
+ <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 90px;
+    background: transparent;
+    overflow-x: auto;   /* ← дозволяє горизонтальний скрол */
+    overflow-y: hidden;
+  }
 
-    tv-ticker-tape {
-      display: block;
-      height: 90px;
-    }
-  </style>
+  tv-ticker-tape {
+    display: block;
+    height: 90px;
+    min-width: 1200px;  /* ← ключ: змушує стрічку бути ширшою за iframe */
+  }
+</style>
+
 </head>
 
 <body>
