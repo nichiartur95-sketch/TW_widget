@@ -5,22 +5,32 @@
   <title>TradingView Ticker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
- <style>
+<style>
   html, body {
     margin: 0;
     padding: 0;
+    width: 100vw;
     height: 90px;
     background: transparent;
-    overflow-x: auto;   /* ← дозволяє горизонтальний скрол */
-    overflow-y: hidden;
+    overflow: hidden;
   }
 
   tv-ticker-tape {
     display: block;
     height: 90px;
-    min-width: 1200px;  /* ← ключ: змушує стрічку бути ширшою за iframe */
+    width: 100vw;
+  }
+
+  /* Маскує білий фон iframe Notion */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: #121212; /* колір фону Notion (dark) */
+    z-index: -1;
   }
 </style>
+
 
 </head>
 
